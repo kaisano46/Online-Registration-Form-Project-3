@@ -1,0 +1,198 @@
+/* ---- Base Styles ---- */
+
+* {box-sizing: border-box;}
+
+html {font-size: 18px;}
+
+body{
+    font-family: 'Raleway', sans-serif;
+    background-color: whitesmoke;
+    line-height: 1.6;
+    min-height: 100vh;
+    font-weight: 400;
+    margin: 0;
+    width: 100%;
+}
+
+h1{
+    text-transform: uppercase;
+    font-weight: 900;
+    font-size: 1.6em;
+    background-color: #093a58;
+    margin: .5em 0;
+}
+
+h2 {
+    font-size: 1.4em;
+    margin: 1em 0 0 0;
+}
+
+/* ---- Layout Styles ---- */
+
+.title{
+    background-color: #093a58;
+    text-align: center;
+    color: white;
+    padding: 1em;
+}
+
+.banner{
+    background-color: whitesmoke;
+    text-align: center;
+    width: 100%;
+}
+
+.banner p{
+    color: gray;
+    padding: .3em 1em 1em 1em;
+    margin-top:0;
+}
+
+main {
+    margin: 0 25px;
+}
+
+.container {
+    padding: 4px 0;
+    border-top: 4px solid #2d3945;
+    margin: 0 auto;
+    max-width: 600px;
+}
+
+.container::before {
+    content: " ";
+    border-top: 2px solid #2d3945;
+    display: block;
+}
+
+footer {
+    margin-top: 2em;
+    text-align: center;
+    color: #666;
+    font-style: italic;
+
+}
+
+/* ---- Layout Styles ---- */
+fieldset{
+    margin: 0;
+    padding: 0;
+    border:0;
+}
+.contact-info{
+    padding-bottom: 2.5em;
+    border-bottom: 4px solid #2d3945 ;
+
+}
+
+input[type="text"], input[type="email"], input[type=tel],textarea, select {
+    display: block;
+    width: 100%;
+    height: 60px;
+    padding: 15px;
+    margin: 5px 0;
+    border: none;
+    font-family: 'Merriweather', serif;
+    font-size: 1em;
+    color: #2d3945;
+    background: #eff0f1;
+    transition: background-color 0.5s ease;
+       
+}
+
+
+
+input:focus, textarea:focus {
+    outline: 2px solid rgb(30, 120, 180);
+    
+    background: white;
+}
+
+textarea{
+    margin-top: .8em;
+    width: 100%;
+    height: 100px;
+
+}
+input[id="zip"] {
+    width: 50%;
+}
+legend {
+    font-weight: 700;
+    font-size: 1.75rem;
+    padding-top: 1em;
+}
+label {
+    display: block; 
+    margin-top: 1.5rem;
+    font-size: 1.1rem;
+    
+}
+
+input[type="checkbox"], input[type="radio"],
+.label-il{
+    display: inline-block;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    
+}
+input[placeholder]{
+    font-style: italic;
+
+}
+
+.newsletter-label{
+    margin-bottom: .5em;
+
+}
+button{
+    background-color: rgb(38, 133, 136);
+    font-weight: 700;
+    font-size: 1.5em;
+    width: 100%;
+    border:0;
+    border-radius: 5px;
+    padding: .5em;
+    color: white;
+    cursor: pointer;
+    
+}
+button:focus{
+    background-color: rgb(11, 214, 197);
+}
+
+button:hover{
+    color: #001F3F;
+}
+
+/* ================================= 
+  Media Queries
+==================================== */
+
+@media (min-width: 768px) {
+    body{
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .flexbox{
+        display: flex;
+        flex-direction: row;
+        justify-content: left;
+    }
+    
+    label{
+        line-height: normal;
+        flex: 0 50%;    
+    }
+
+    input[id="zip"]{
+        width: 25%;
+    }
+    .flexbox.zip{
+        flex: 25%;
+        max-width: 65%;
+        justify-items: left;
+
+    }
+}
