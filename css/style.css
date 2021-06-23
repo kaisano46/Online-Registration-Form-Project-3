@@ -66,13 +66,19 @@ main {
 }
 
 footer {
+    background-color: #093a58;
     margin-top: 2em;
+    padding: .5em 0;
     text-align: center;
     color: #666;
-    font-style: italic;
-
+    font-style: italic;   
 }
 
+.copyright{
+    margin: 0;
+    color: white;
+
+}
 /* ---- Layout Styles ---- */
 fieldset{
     margin: 0;
@@ -101,8 +107,7 @@ input[type="text"], input[type="email"], input[type=tel],textarea, select {
 }
 
 
-
-input:focus, textarea:focus {
+input:focus, textarea:focus, select:focus{
     outline: 2px solid rgb(30, 120, 180);
     
     background: white;
@@ -155,10 +160,11 @@ button{
     padding: .5em;
     color: white;
     cursor: pointer;
+    transition: background-color 0.5s ease;;
     
 }
 button:focus{
-    background-color: rgb(11, 214, 197);
+    background-color: #719ECE;
 }
 
 button:hover{
